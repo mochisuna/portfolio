@@ -197,15 +197,15 @@
 - [Talk Live in Summer 2015 at DMM.com Labo
 ](https://techplay.jp/event/565755)
   - DMM会場枠
-  - [「DMM.com Laboに入社してみた 〜学生時代に”学んで良かったこと”と”学んでおけば良かったこと”〜](https://www.slideshare.net/DMMlabo/dmm-52281664)
+  - [「DMM.com Laboに入社してみた 〜学生時代に”学んで良かったこと”と”学んでおけば良かったこと”〜」](https://www.slideshare.net/DMMlabo/dmm-52281664)
 - [#ssmjp 2016/04](https://ssm.pkan.org/ssmjp%E3%81%BE%E3%81%A8%E3%82%81/2016%E5%B9%B404%E6%9C%88%E3%81%AEssmjp%E3%81%BE%E3%81%A8%E3%82%81/)
   - DMM会場枠
-  - botに業務記録から日報を書かせた話
+  - 「botに業務記録から日報を書かせた話」
 - 社内外LT会
   - AWSの方を招いてのLT会
-  - 通知配信プラットフォームについて
+  - 「通知配信プラットフォームについて」
 - 社内発表
-  - アサーティブ・コミュニケーション
+  - 「アサーティブ・コミュニケーション」
 ### 受賞
 - 明治大学プログラミングコンテスト - [特別賞](http://www.cs.meiji.ac.jp/news/news-j-2011.html)
 - 若手エンジニアのプレゼン力を磨け！DMM.comラボ×さくらが合同研修 - [優勝](http://ascii.jp/elem/000/001/437/1437601/)
