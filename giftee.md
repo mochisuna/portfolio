@@ -54,4 +54,4 @@
   - 負荷試験
     - シナリオ作成
     - ドキュメントまとめ
-    - 社外勉強会で登壇
+    - [社外勉強会で登壇](https://speakerdeck.com/mochisuna/giftee-load-test-night-01-maruta)

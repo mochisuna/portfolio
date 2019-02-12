@@ -16,7 +16,7 @@
 ## 職務経歴
 
 ### 株式会社DMM.comラボ(正社員: 2015/04/01 ~ 2018/04/10)
-概要
+概要（詳細は[こちら](dmm.md)）
 
 #### ユーザー系API開発
 - 時期: 2015/07 ~ 2016/05
@@ -24,7 +24,6 @@
 - 役割: サーバーサイドエンジニア
 - 技術（詳細は個別ページにて）  
   Java（[Spring](http://spring.io/)）, PHP, MySQL, Couchbase, RabbitMQ, Jenkins
-- [担当内容など](dmm.md)
 
 #### 通知配信システム開発（非クラウド範囲）
 - 時期: 2016/05 ~ 20187/09
@@ -47,19 +46,22 @@
 #### メンター(2016/05 ~ 2018/04)
 - 後輩のメンター業務（2年連続）
 
+---
+
 ### 株式会社giftee(正社員: 2018/04/11 ~ )
+概要（詳細は[こちら](giftee.md)）
 #### SaaSシステム開発
 - 時期: 2018/04 ~ 
 - 体制: 6人
 - 役割: サーバーサイド・フロントエンド
 - 技術（詳細は個別ページにて）  
   - Ruby on Rails, AngularJS, CoffeeScript, MySQL, Redis, nginx, [Sidekiq](https://github.com/mperham/sidekiq), gatling, selenium, unicorn他, capistrano, CircleCI, ansible
-- [担当内容など](giftee.md)
+
+---
 
 ## 学生時代の研究経歴
-おまけ
+おまけ。  
 [学生時代にやってきた研究等](student.md)
-
 
 ## 活動
 ### 言語・プラットフォーム経験
@@ -87,8 +89,10 @@
   - Supervisor
   - digdag
   - Terraform
+  - gatling
 
 ### 登壇
+[Speaker Deck](https://speakerdeck.com/mochisuna)
 - [Talk Live in Summer 2015 at DMM.com Labo
 ](https://techplay.jp/event/565755)
   - DMM会場枠
