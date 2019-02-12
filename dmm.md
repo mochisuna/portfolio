@@ -1,0 +1,144 @@
+### 株式会社DMM.comラボ(正社員: 2015/04/01 ~ 2018/04/10)
+#### ユーザー系API開発
+- 時期: 2015/07 ~ 2016/05
+- 体制: 9 ~ 11人
+- 役割: サーバーサイドエンジニア
+- 技術
+  - 言語
+    - Java（フレームワークは[Spring](http://spring.io/)）
+    - PHP（テスト用。記憶がだいぶ曖昧だけどPHPUnitだったはず）
+  - ミドルウェア
+    - MySQL
+    - Couchbase
+    - RabbitMQ
+  - ライブラリ等
+    - [SLF4J](https://www.slf4j.org/)
+    - [Log4j](https://logging.apache.org/log4j/2.x/)
+    - [Mockito](http://site.mockito.org/)
+    - [Junit](https://junit.org/junit5/)
+    - [Tomcat](http://tomcat.apache.org/)
+    - [Jackson](http://jackson.codehaus.org/)
+  - CI/CD
+    - Jenkins
+  - 監視
+    - Zabbix
+- 担当箇所、凝った箇所、悩んだ箇所など
+  - ユーザー情報系API（登録/削除/更新）
+    - 人生初のチーム開発（しかも大人数）なのでとても緊張した記憶
+    - 会員情報はクリティカルに重要な部分なのでチームの人に相談しながら作った
+    - API開発の知識がなさすぎてとても苦戦した記憶
+  - Jenkins
+    - 職人芸・・・
+  - テスト
+    - ひたすら品質保証
+    - 型のない言語が苦手になった遠因
+#### 通知配信システム開発（非クラウド範囲）
+- 時期: 2016/05 ~ 20187/09
+- 体制: 4 ~ 8人（必要に応じて増えたり減ったり）
+- 役割
+  - サーバーサイドエンジニア
+  - インフラエンジニア
+  - 一部フロントエンジニア
+- 技術
+  - 言語
+    - Java（[Spring](http://spring.io/)）
+    - Go（[echo](https://echo.labstack.com/)）
+    - Node.js（[React](https://reactjs.org/)）
+  - ミドルウェア
+    - MySQL
+    - [Cassandra](http://cassandra.apache.org/)
+    - [ZooKeeper](https://zookeeper.apache.org/)
+    - [Kafka](https://kafka.apache.org/)
+  - CI/CD
+    - CircleCI
+    - [Capistrano](https://capistranorb.com/)
+    - [supervisor](http://supervisord.org/)
+  - ライブラリ等
+    - java
+      - [SLF4J](https://www.slf4j.org/)
+      - [Log4j](https://logging.apache.org/log4j/2.x/)
+      - [Mockito](http://site.mockito.org/)
+      - [Junit](https://junit.org/junit5/)
+      - [Tomcat](http://tomcat.apache.org/)
+      - [Jackson](http://jackson.codehaus.org/)
+    - go
+      - [xid](https://www.npmjs.com/package/uuid)
+      - [toml](https://github.com/BurntSushi/toml)
+    - node
+      - [mocha](https://mochajs.org/)
+      - [mocha](https://mochajs.org/)
+      - [chai](http://chaijs.com/)
+      - [sinon](http://sinonjs.org/)
+  - 監視
+    - Zabbix
+- 担当箇所、凝った箇所、悩んだ箇所など
+  - とにかく知らない技術に沢山触れることができた
+    - 先生とも呼べるリーダーの下でトライアルアンドエラーを繰り返すことができた
+  - Reactのライフサイクルに乗らない処理を書いてしまい自分の首を絞めまくった
+  - 部分的にjava製システム、ミドルウェア経由でgo製システムに渡すというトライができた
+  - DBで`なんでも入れられるカラム`を作ると障害発生時に追跡するのがとても大変だという知見を得られた
+  - goで開発する場合、interfaceありきで作るよりも必要な機能を包含するinterfaceを用意するという形の方がやりやすいという知見を得られた
+#### 通知配信システム開発（クラウド範囲）
+- 時期: 2017/09 ~ 2018/04
+- 体制: 5 ~ 7人（必要に応じて増えたり減ったり）
+- 役割
+  - サーバーサイドエンジニア
+  - クラウドインフラエンジニア
+- 技術
+  - 言語
+    - Go（[gorillatoolkit](http://www.gorillatoolkit.org/)）
+    - Node.js（[co](https://github.com/tj/co)）
+  - ライブラリ等
+    - go
+      - [aws-sdk-go](https://github.com/aws/aws-sdk-go)
+      - [toml](https://github.com/BurntSushi/toml)
+      - [xid](https://github.com/rs/xid)
+      - [negroni](https://github.com/urfave/negroni)
+      - [godo](https://gopkg.in/godo.v2)
+      - [gorp](https://gopkg.in/gorp.v2)
+      - [ozzo-validation](github.com/go-ozzo/ozzo-validation)
+      - [minio](https://www.minio.io/)
+    - node
+      - [yarn](https://yarnpkg.com/ja/)
+      - [node-fetch](https://www.npmjs.com/package/node-fetch)
+      - [log4js](https://www.npmjs.com/package/log4js)
+      - [knex](https://knexjs.org/)
+      - [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch)
+      - [co-fs](https://www.npmjs.com/package/co-fs)
+  - 監視 / BI
+    - CloudWatch
+    - Kibana
+    - re:dash（digdagでAPIから集計）
+  - AWS
+    - CloudFormation
+    - VPC
+    - EC2（ElasticBeanstalk）
+    - ECS（Fargate）
+    - ElastiCache
+    - ElasticSearch
+    - CloudWatch Event
+    - Lambda
+    - DynamoDB
+    - S3
+    - RDS
+    - CloudFront
+    - SQS
+  - 担当箇所、凝った箇所、悩んだ箇所など
+    - AWSクッッッッッッッッッッッソ便利
+      - 最初EC2インスタンスで立てていたものをコンテナに切り替えるのがものすごく楽だった
+      - Lambdaが便利すぎる
+      - 暖気申請をしないで負荷試験をしてエラーになりまくったのは良い思い出
+		- Node.jsが難しかった
+      - Lambdaの対応状況に依存しco routineを採用
+      - promiseよりは見やすいが、慣れが必要だった
+    - 初めてRESTfulなAPIを作っているという実感が持てた
+    - goの標準ライブラリが強力だと感じた
+      - httpパッケージとか
+      - 階層型のパッケージ分離をしていた
+        - 当時は「これはやりやすい！」と思っていたが、もう少し切り方があったと反省
+        - negroniでミドルウェアをリレーする方針はかなり良いと思った
+    - デプロイが割とゴリ押しだった
+      - CircleCIでかなり複雑なやり方をしてしまった
+    - digdagが思った以上に簡単に設定できたのでよかった
+#### メンター(2016/05 ~ 2018/04)
+- 後輩のメンター業務（2年連続）
