@@ -1,0 +1,57 @@
+# 株式会社giftee(正社員: 2018/04/11 ~ )
+## SaaSシステム開発
+- 時期: 2018/04 ~ 
+- 体制: 6人
+- 役割: サーバーサイド・フロントエンド
+- 技術
+  - 言語
+    - Ruby on Rails
+    - AngularJS（勘弁してほしい）
+    - CoffeeScript (^ω^ ;)
+  - ミドルウェア: 
+    - MySQL
+    - Redis
+    - nginx
+    - [Sidekiq](https://github.com/mperham/sidekiq)
+  - テストツール
+    - gatling
+    - selenium
+  - ライブラリ等
+    - unicorn
+    - slim-rails
+    - whenever
+    - gon
+    - faraday
+    - annotate
+    - rack-dev-mark
+    - letter_opener_web
+  - CI/CD
+    - capistrano
+    - CircleCI
+  - インスタンス構成
+    - ansible
+- 担当箇所、凝った箇所、悩んだ箇所など
+  - GitHub運用改善
+    - ブランチ運用が非効率だったので運用改善
+      - issue / PRのテンプレート作成
+      - マージの承認フロー改善
+      - ブランチ運用提案
+      - [社内外で記事にしました](https://qiita.com/mochisuna/items/8cdab33f2f903817cc92)
+  - 作成したチケットのQAをseleniumで自動化
+    - なんで手作業してたんだろ枠
+  - チケット・ストア管理画面（CMS）の改善
+    - [いくつかのストア](https://31ice.e-gift.co)の販売画面が改善されました
+  - 新規協力会社連携：Godiva
+    - チケット生成
+    - API連携
+  - CI/CD効率化
+    - CircleCI導入
+    - なんで手作業してたんだろ枠
+  - 新規協力会社連携：ファミリーマート
+    - チケット生成
+    - API連携
+    - 集計自動化
+  - 負荷試験
+    - シナリオ作成
+    - ドキュメントまとめ
+    - 社外勉強会で登壇
