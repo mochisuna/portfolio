@@ -23,5 +23,5 @@
 
 <script lang="ts">
 import { Vue } from "vue-property-decorator";
-export default class Menu extends Vue {}
+export default class Menu extends Vue { }
 </script>

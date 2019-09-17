@@ -8,10 +8,7 @@
         :cohere="`${cohered}`"
         v-on:mouseover="cohered = true"
         v-on:mouseleave="cohered = false"
-        v-on:click="refs"
       />
-      <p>flyaway {{ flyaway }}</p>
-      <p>cohered {{ cohered }}</p>
     </div>
   </transition>
 </template>
@@ -28,19 +25,15 @@ import KppaImg from "@/assets/kappa.svg";
 export default class Kappa extends Vue {
   @Prop({ default: 0 }) private x!: Number;
   @Prop({ default: 0 }) private y!: Number;
+  @Prop({ default: 0 }) private rotate!: Number;
   @Prop({ default: 1 }) private scaleX!: Number;
   @Prop({ default: 1 }) private scaleY!: Number;
   @Prop({ default: false }) private flyaway!: boolean;
   private cohered: boolean = false;
 
-  public refs(): void {
-    console.log(
-      this.$el.getElementsByClassName("kappa-body")
-    );
-  }
   private get styles() {
     return {
-      transform: `translate(${this.x}px, ${this.y}px)`
+      transform: `translate(${this.x}px, ${this.y}px) rotate(${this.rotate}deg) scale(${this.scaleX}, ${this.scaleY})`
     };
   }
 }
@@ -51,7 +44,7 @@ export default class Kappa extends Vue {
   display: none;
 }
 .kappa-cloud {
-  // [info]この辺力押しなので直したい
+  // [info]この辺は力押しなので直したい
   &[fly="false"] {
     .kappa-head {
       transform-origin: center;

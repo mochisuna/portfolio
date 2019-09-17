@@ -4,13 +4,9 @@
     <button v-on:click="skip">Skip</button>
   </div>
   <div v-else class="home" v-on:mousedown="flyaway = true" v-on:mouseup="flyaway = false">
-    <div kappa-component>
-      <Menu />
-      <div kappa-component>
-        <Kappa :flyaway="flyaway" />
-      </div>
-    </div>
-
+    <Menu />
+    <Kappa :flyaway="flyaway" />
+    <Ball msg="aaa" />
     <!-- <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" /> -->
 
     <Sample msg="Test" />
@@ -25,12 +21,14 @@ import HelloWorld from "@/components/HelloWorld.vue";
 import Sample from "@/components/Sample.vue";
 import Menu from "@/components/Menu.vue";
 import Kappa from "@/components/Kappa.vue";
+import Ball from "@/components/Ball.vue";
 
 @Component({
   name: "home",
   components: {
     Menu,
     Kappa,
+    Ball,
     HelloWorld,
     Sample
   }
