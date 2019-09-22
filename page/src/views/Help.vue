@@ -1,10 +1,6 @@
 <template>
   <div class="help">
-    <div
-      kappa-component
-      v-on:mouseover="cohered = true"
-      v-on:mouseleave="cohered = false"
-    >
+    <div kappa-component @mouseover="cohered = true" @mouseleave="cohered = false">
       <Menu />
       <Kappa />
     </div>
@@ -12,24 +8,25 @@
   </div>
 </template>
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import Menu from "@/components/Menu.vue";
+import Vue from "vue";
+import Menu from "@/components/menu/CircleMenu.vue";
 import Kappa from "@/components/Kappa.vue";
-@Component({
-  name: "help",
+
+export default Vue.extend({
+  name: "Help",
   components: {
     Menu,
     Kappa
-  }
-})
-export default class Home extends Vue {
-  private redirect(): void {
-    if (!this.$store.getters.isOpened) {
-      this.$router.push("/");
-    }
-  }
+  },
   async mounted() {
     await this.redirect();
+  },
+  methods: {
+    redirect(): void {
+      if (!this.$store.getters.isOpened) {
+        this.$router.push("/");
+      }
+    }
   }
-}
+});
 </script>

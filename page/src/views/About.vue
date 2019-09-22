@@ -5,23 +5,22 @@
   </div>
 </template>
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import Menu from "@/components/Menu.vue";
+import Vue from "vue";
+import Menu from "@/components/menu/CircleMenu.vue";
 
-@Component({
-  name: "about",
+export default Vue.extend({
   components: {
     Menu
-  }
-})
-export default class About extends Vue {
-  private redirect(): void {
-    if (!this.$store.getters.isOpened) {
-      this.$router.push("/");
-    }
-  }
+  },
   async mounted() {
     await this.redirect();
+  },
+  methods: {
+    redirect(): void {
+      if (!this.$store.getters.isOpened) {
+        this.$router.push("/");
+      }
+    }
   }
-}
+});
 </script>

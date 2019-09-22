@@ -5,12 +5,13 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import Vue from "vue";
 
-@Component
-export default class Sample extends Vue {
-  @Prop() private msg!: string;
-}
+export default Vue.extend({
+  props: {
+    msg: { type: String, default: "", required: true }
+  }
+});
 </script>
 
 <style lang="scss" module></style>

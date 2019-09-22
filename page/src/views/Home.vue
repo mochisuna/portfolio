@@ -1,43 +1,17 @@
 <template>
-  <div v-if="!this.$store.getters.isOpened">
-    <p>keyword: {{ this.$store.getters.getKeyword }}</p>
-    <button v-on:click="skip">Skip</button>
-  </div>
-  <div v-else class="home" v-on:mousedown="flyaway = true" v-on:mouseup="flyaway = false">
-    <Menu />
-    <Kappa :flyaway="flyaway" />
-    <Ball msg="aaa" />
-    <!-- <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" /> -->
-
-    <Sample msg="Test" />
-
-    <p v-if="cohered">nyao</p>
-  </div>
+  <Top v-if="!this.$store.getters.isOpened" />
+  <Main v-else />
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import HelloWorld from "@/components/HelloWorld.vue";
-import Sample from "@/components/Sample.vue";
-import Menu from "@/components/Menu.vue";
-import Kappa from "@/components/Kappa.vue";
-import Ball from "@/components/Ball.vue";
+import Vue from "vue";
+import Main from "@/components/Main.vue";
+import Top from "@/components/Top.vue";
 
-@Component({
-  name: "home",
+export default Vue.extend({
   components: {
-    Menu,
-    Kappa,
-    Ball,
-    HelloWorld,
-    Sample
+    Top,
+    Main
   }
-})
-export default class Home extends Vue {
-  private cohered: boolean = false;
-  private flyaway: boolean = false;
-  public skip(): void {
-    this.$store.dispatch("setOpenedAction");
-  }
-}
+});
 </script>
