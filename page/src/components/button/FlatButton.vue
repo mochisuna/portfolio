@@ -8,9 +8,7 @@
   >
     <hr v-show="selected" class="line-top" />
     <router-link class="circle" :to="{ path: `${path}` }">
-      {{
-      msg
-      }}
+      {{ msg }}
     </router-link>
     <hr v-show="selected" class="line-bottom" />
   </div>

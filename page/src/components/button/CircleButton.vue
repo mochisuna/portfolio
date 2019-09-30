@@ -7,11 +7,9 @@
     @mouseleave="selected = false"
   >
     <hr v-show="selected" class="line-top" />
-    <router-link class="circle" :to="{ path: `${path}` }">
-      {{
+    <router-link class="circle" :to="{ path: `${path}` }">{{
       msg
-      }}
-    </router-link>
+    }}</router-link>
     <hr v-show="selected" class="line-bottom" />
   </div>
 </template>

@@ -52,7 +52,7 @@ export default Vue.extend({
   // [info]この辺は力押しなので直したい
   &[flyaway-style="false"] {
     .kappa-head {
-      transform-origin: center;
+      transform-origin: center center;
       transition-duration: 1s;
     }
   }
@@ -66,31 +66,31 @@ export default Vue.extend({
   &[cohered-style="true"] {
     .kappa-element,
     .kappa-frame {
-      transform-origin: center;
+      transform-origin: center center;
       animation: disappear-animation 0.5s ease-in forwards;
     }
     .kappa-body {
       transition-duration: 0.8s;
-      transform-origin: center;
+      transform-origin: center center;
       transform: scale(1, 1);
     }
   }
   &[cohered-style="false"] {
     .kappa-element:nth-of-type(2n),
     .kappa-frame:nth-of-type(2n) {
-      transform-origin: center;
+      transform-origin: center center;
       animation: appear-animation 0.5s ease-in forwards,
         cloud-animation 1.4s ease-in-out 0.5s infinite alternate;
     }
     .kappa-element:nth-of-type(2n + 1),
     .kappa-frame:nth-of-type(2n + 1) {
-      transform-origin: center;
+      transform-origin: center center;
       animation: appear-animation 0.5s ease-in forwards,
         cloud-animation 1.9s ease-in-out 0.5s infinite alternate-reverse;
     }
     .kappa-body {
       transition-duration: 0.8s;
-      transform-origin: center;
+      transform-origin: center center;
       transform: scale(0, 0);
     }
   }

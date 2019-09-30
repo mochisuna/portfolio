@@ -1,6 +1,10 @@
 <template>
   <div class="help">
-    <div kappa-component @mouseover="cohered = true" @mouseleave="cohered = false">
+    <div
+      kappa-component
+      @mouseover="cohered = true"
+      @mouseleave="cohered = false"
+    >
       <Menu />
       <Kappa />
     </div>
