@@ -1,17 +1,17 @@
 <template>
-  <Top v-if="!this.$store.getters.isOpened" />
-  <Main v-else />
+  <start v-if="!this.$store.getters.isOpened" />
+  <top v-else />
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import Main from "@/components/Main.vue";
 import Top from "@/components/Top.vue";
+import Start from "@/components/Start.vue";
 
 export default Vue.extend({
   components: {
     Top,
-    Main
+    Start
   }
 });
 </script>

@@ -7,9 +7,9 @@
     @mouseleave="selected = false"
   >
     <hr v-show="selected" class="line-top" />
-    <router-link class="circle" :to="{ path: `${path}` }">{{
-      msg
-    }}</router-link>
+    <router-link class="circle" :to="{ path: `${path}` }">
+      {{ msg }}
+    </router-link>
     <hr v-show="selected" class="line-bottom" />
   </div>
 </template>
@@ -18,7 +18,6 @@
 import Vue from "vue";
 
 export default Vue.extend({
-  name: "FlatButton",
   props: {
     background: { type: String, default: "" },
     msg: { type: String, default: "", requiered: true },

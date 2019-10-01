@@ -1,7 +1,7 @@
 <template>
   <transition mode="out-in">
     <div>
-      <KppaImg
+      <kppa-img
         :style="styles"
         :flyaway-style="`${flyaway}`"
         :cohered-style="`${cohered || hovered}`"
@@ -16,7 +16,6 @@ import Vue from "vue";
 import KppaImg from "@/assets/kappa.svg";
 
 export default Vue.extend({
-  name: "Kappa",
   components: {
     KppaImg
   },

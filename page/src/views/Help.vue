@@ -1,25 +1,20 @@
 <template>
   <div class="help">
-    <div
-      kappa-component
-      @mouseover="cohered = true"
-      @mouseleave="cohered = false"
-    >
-      <Menu />
-      <Kappa />
+    <div kappa-component>
+      <top-menu />
+      <kappa />
     </div>
     <p>hi!: {{ this.$store.getters.getKeyword }}</p>
   </div>
 </template>
 <script lang="ts">
 import Vue from "vue";
-import Menu from "@/components/menu/CircleMenu.vue";
+import TopMenu from "@/components/menu/CircleMenu.vue";
 import Kappa from "@/components/Kappa.vue";
 
 export default Vue.extend({
-  name: "Help",
   components: {
-    Menu,
+    TopMenu,
     Kappa
   },
   async mounted() {

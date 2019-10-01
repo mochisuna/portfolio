@@ -1,19 +1,18 @@
 <template>
   <div class="menu" :hovered-style="hovered">
-    <Button path="/" class="button-1" msg="Home" :active="hovered" />
-    <Button path="/about" class="button-2" msg="About" :active="hovered" />
-    <Button path="/help" class="button-3" msg="Help" :active="hovered" />
-    <Button path="/" class="button-4" msg="Home" :active="hovered" />
+    <btn path="/" class="button-1" msg="Home" :active="hovered" />
+    <btn path="/about" class="button-2" msg="About" :active="hovered" />
+    <btn path="/help" class="button-3" msg="Help" :active="hovered" />
+    <btn path="/" class="button-4" msg="Home" :active="hovered" />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import Button from "@/components/button/FlatButton.vue";
+import Btn from "@/components/button/FlatButton.vue";
 export default Vue.extend({
-  name: "CircleMenu",
   components: {
-    Button
+    Btn
   },
   props: {
     hovered: { type: Boolean, default: false }
