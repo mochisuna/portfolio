@@ -1,6 +1,8 @@
 <template>
-  <start v-if="!this.$store.getters.isOpened" />
-  <top v-else />
+  <div class="home" @mousedown="mouseClick(true)" @mouseup="mouseClick(false)">
+    <start v-if="!this.$store.getters.isOpened" />
+    <top v-else />
+  </div>
 </template>
 
 <script lang="ts">
@@ -12,6 +14,15 @@ export default Vue.extend({
   components: {
     Top,
     Start
+  },
+  methods: {
+    mouseClick(flg: boolean): void {
+      if (flg) {
+        this.$store.dispatch("setClickedAction");
+      } else {
+        this.$store.dispatch("unsetClickedAction");
+      }
+    }
   }
 });
 </script>

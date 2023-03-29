@@ -1,18 +1,19 @@
 <template>
-  <div class="home" @mousedown="flyaway = true" @mouseup="flyaway = false">
-    <div class="main" @mouseover="hovered = true" @mouseleave="hovered = false">
-      <top-menu class="menu" :hovered="hovered" />
-      <kappa :flyaway="flyaway" :hovered="hovered" />
-      <sample msg="Test" />
+  <div class="main">
+    <div @mouseover="isHovered = mouseHover(true)" @mouseleave="isHovered = mouseHover(false)">
+      <top-menu class="menu" />
+      <kappa />
     </div>
-    <p v-if="hovered">nyao</p>
+    <!-- <p v-if="isHovered">nyao</p> -->
+    <sample title="タイトル" description="説明文" />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
+import { mapGetters } from "vuex";
 import Sample from "@/components/Sample.vue";
-import TopMenu from "@/components/menu/GraphMenu.vue";
+import TopMenu from "@/components/menu/CircleMenu.vue";
 import Kappa from "@/components/Kappa.vue";
 
 export default Vue.extend({
@@ -21,11 +22,15 @@ export default Vue.extend({
     Kappa,
     Sample
   },
-  data() {
-    return {
-      flyaway: false,
-      hovered: false
-    };
+  methods: {
+    mouseHover(flg: boolean): void {
+      console.log(`nyan${flg}`);
+      if (flg) {
+        this.$store.dispatch("setHoveredAction");
+      } else {
+        this.$store.dispatch("unsetHoveredAction");
+      }
+    }
   }
 });
 </script>

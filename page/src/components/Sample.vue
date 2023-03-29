@@ -1,6 +1,7 @@
 <template>
   <div class="sample">
-    <h1>{{ msg }}</h1>
+    <h1>{{ title }}</h1>
+    <p>{{ description }}</p>
   </div>
 </template>
 
@@ -9,7 +10,8 @@ import Vue from "vue";
 
 export default Vue.extend({
   props: {
-    msg: { type: String, default: "", required: true }
+    title: { type: String, default: "", required: true },
+    description: { type: String, default: "" }
   }
 });
 </script>
