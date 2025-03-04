@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <circle class="sample-animation-group-1" cx="50" cy="50" r="20" fill="blue" />
+  <circle class="sample-animation-group-1" cx="150" cy="50" r="15" fill="red" />
+  <rect class="sample-animation-group-1" x="200" y="30" width="40" height="40" fill="green" />
+  <ellipse class="sample-animation-group-1" cx="300" cy="50" rx="25" ry="15" fill="purple" />
+  <polygon class="sample-animation-group-1" points="75,150 100,125 125,150 100,175" fill="orange" />
+</svg>

@@ -1,35 +1,75 @@
-# page
+# Nuxt Minimal Starter
 
-## Project setup
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-```
+## Setup
+
+Make sure to install dependencies:
+
+```bash
+# npm
+npm install
+
+# pnpm
+pnpm install
+
+# yarn
 yarn install
+
+# bun
+bun install
 ```
 
-### Compiles and hot-reloads for development
+## Development Server
 
-```
-yarn run serve
-```
+Start the development server on `http://localhost:3000`:
 
-### Compiles and minifies for production
+```bash
+# npm
+npm run dev
 
-```
-yarn run build
-```
+# pnpm
+pnpm dev
 
-### Run your tests
+# yarn
+yarn dev
 
-```
-yarn run test
-```
-
-### Lints and fixes files
-
-```
-yarn run lint
+# bun
+bun run dev
 ```
 
-### Customize configuration
+## Production
 
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Build the application for production:
+
+```bash
+# npm
+npm run build
+
+# pnpm
+pnpm build
+
+# yarn
+yarn build
+
+# bun
+bun run build
+```
+
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
