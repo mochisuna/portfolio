@@ -28,14 +28,17 @@ const toggleAnimation = () => {
 $bgColor: #fff4cc;
 $borderColor: #707070;
 $kappaColor: #91ffab;
-$buttonColor: #aa88cc;
+$buttonColor: #88aaff;
+$buttonHoverColor: #cc66aa;
 
 // サイズ系の定義
 $targetSize: 800px;
 $kappaSize: 500px;
 $circleSize: 50px;
 $borderSize: 7px;
+
 $buttonDistance: 250px;
+$buttonRadius: 10px;
 
 // 繰り返しアニメーションの時間定義
 $kappaAnime01Rate: 0.8s;
@@ -120,6 +123,16 @@ $kappaBodyCombineAnimeRate: 0.3s;
     transform-origin: center;
     transform: scale(1.1, 1.1);
   }
+  .kappa-head {
+    transform: translate(0, 0);
+    transition-duration: 1.5s;
+  }
+}
+#kappa:active {
+  .kappa-head {
+    transform: translate(0, -100px);
+    transition-duration: 0.3s;
+  }
 }
 .circle {
   top: calc(50% - $circleSize/2);
@@ -134,7 +147,6 @@ $kappaBodyCombineAnimeRate: 0.3s;
   transition: transform $circleMoveAnimeRate ease;
 }
 
-$position: 10px;
 .button {
   z-index: 3;
   opacity: 0;
@@ -142,17 +154,17 @@ $position: 10px;
   left: calc(50% - 150px);
   width: 300px;
   height: 200px;
-  border-radius: $position;
+  border-radius: $buttonRadius;
   background-color: $buttonColor;
   position: absolute;
 }
 .button::after {
   content: "";
   position: absolute;
-  top: $position + 2;
-  left: $position + 2;
-  right: $position + 2;
-  bottom: $position + 2;
+  top: $buttonRadius + 2;
+  left: $buttonRadius + 2;
+  right: $buttonRadius + 2;
+  bottom: $buttonRadius + 2;
   border: 3px solid white;
   border-radius: 0%;
   pointer-events: none;
@@ -160,7 +172,7 @@ $position: 10px;
 
 .button:hover {
   transition-duration: 1s;
-  background-color: #1188ff;
+  background-color: $buttonHoverColor;
 }
 
 #button1 {
@@ -335,18 +347,18 @@ $position: 10px;
   0% {
   }
   50% {
-    border-radius: 10%;
+    border-radius: $buttonRadius;
     background-color: $kappaColor;
     background-color: $buttonColor;
   }
   90% {
     opacity: 1;
-    border-radius: 10%;
+    border-radius: $buttonRadius;
   }
   100% {
     opacity: 0;
     background-color: $buttonColor;
-    border-radius: 10%;
+    border-radius: $buttonRadius;
   }
 }
 
